@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- java -->
-    <script src="tailwind.config.js"></script>
+    <script src="style.css"></script>
     <title>Bus Ticket</title>
 </head>
 
@@ -26,41 +24,184 @@
                     </div>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
                         <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
+                            <a>Home</a>
                         </li>
-                        <li><a>Item 3</a></li>
+                        <li>
+                            <a>About </a>
+                        </li>
+                        <li>
+                            <a>Destination</a>
+                        </li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">daisyUI</a>
+                <a class="btn btn-ghost text-3xl font-bold">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
                     <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
+                        <a>Home</a>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li>
+                        <summary>About</summary>
+                    </li>
+                    <li>
+                        <a>Destination</a>
+                    </li>
+                    <li>
+                        <a>Search</a>
+                    </li>
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn">Button</a>
+                <a class="btn">
+                    <p class="text-lg">Bus</p> <img src="images/bus-icon.jpg" alt="">
+                </a>
             </div>
         </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <!-- banner -->
+        <div class="hero min-h-screen" style="background-image: url(images/banner.png); ">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-screen-md border gap-3">
+                    <h1 class="border mb-5 text-5xl font-bold">End-to-End Travel with <br> <span class="text-[#1DD100]">
+                            Sakib
+                            Paribahan</span></h1>
+                    <p class="mb-5">Sakib
+                        Paribahan offers the best bus service in Bangladesh, ensuring timely arrivals and
+                        a comfortable <br> journey with amenities like air conditioning, TV, and Wi-Fi</p>
+                    <button class="btn bg-[#1DD100]">Buy Tickets</button>
+                </div>
+            </div>
+        </div>
+        <!-- stat -->
+        <div class="absolute w-full">
+            <div class=" flex flex-row justify-center border -mt-12 w-full">
+
+                <div class=" flex flex-row p-3 bg-white border-b-8 border-s-green-400 rounded-xl mx-5 ">
+                    <img src="images/people.png" alt="">
+                    <div>
+                        <p class="text-4xl font-extrabold">500K+</p>
+                        <p>Registered Users</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row p-3  bg-white rounded-xl mx-5">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <div>
+                        <p class="text-4xl font-extrabold">1.7 Lacks</p>
+                        <p>Tickets Sold</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row   bg-white rounded-xl">
+                    <img src="images/stoppage.png" alt="">
+                    <div>
+                        <p class="text-4xl font-extrabold">80k+</p>
+                        <p>Rental Partners</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Best offers for you -->
+        <div id="offer" class=" mt-20 space-y-8 flex flex-col items-center">
+            <div>
+                <h1 class="font-bold text-4xl">Best offers for you</h1>
+            </div>
+
+            <div class="flex justify-center space-x-8">
+                <div class="stats bg-[#FFBF0F] text-primary-content">
+                    <div class="stat">
+                        <div class="stat-value text-black">15% OFF</div>
+                        <h1 class=" text-black">on your next purchase</h1>
+                        <div class="stat-title"> use by January 2024 </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value text-xl text-black">NEW15</div>
+                        <div class="stat-title"> Coupon Code</div>
+                    </div>
+                </div>
+
+                <div class="stats bg-[#F78C9C] text-primary-content">
+                    <div class="stat">
+                        <div class="stat-value text-black">20% OFF</div>
+                        <h1 class=" text-black">on your next purchase</h1>
+                        <div class="stat-title"> use by January 2024 </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value text-xl text-black">Couple 20</div>
+                        <div class="stat-title"> Coupon Code</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="btn text-[#1DD100] justify-center">See All Offers</button>
+            </div>
+        </div>
+        <!-- poribahan -->
+        <div>
+            <div>
+                <h1>SAKIB Paribahan</h1>
+                <p>Sakib Paribahan offers the best bus service in Bangladesh, ensuring timely arrivals and a comfortable
+                    <br>
+                    journey with amenities like air conditioning, TV, and Wi-Fi
+                </p>
+            </div>
+        </div>
+        <!-- SUCCESS -->
+        <div class="w-screen border h-3/4  bg-slate-400 p-20 mt-9 flex flex-col items-center">
+            <div class="card w-1/2  bg-base-100 shadow-xl p-5 items-center">
+                <div class="card-body displa items-center ">
+                    <div>
+                        <img src="images/success.png" alt="">
+                        <h2 class="card-title text-center text-[#27AE60] ">SUCCESS</h2>
+                    </div>
+                    <div>
+                        <p class="text-center">Thank you for Booking Our Bus Seats. <br>
+                            We are working hard to find the best service and deals for you. <br>
+                            Shortly you will find a confirmation in your email.
+                        </p>
+                    </div>
+                    <div class="card-actions justify-end">
+                        <button class="btn text-white bg-[#27AE60]">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <footer class="footer p-10 bg-neutral text-neutral-content mt-10">
+                <aside>
+                    <div>
+                        <h1 class="text-4xl font-bold text-white">
+                            P-Ticket
+                        </h1>
+                    </div>
+                    <p>
+                        P-Ticket is a digital platform to make your <br>
+                        daily commuting better.
+                    </p>
+                </aside>
+                <nav>
+                    <h6 class="footer-title">Download our app</h6>
+                    <div class="grid grid-flow-col gap-4">
+                        <a>
+                            <img src="images/playstore.png" alt="">
+                        </a>
+                        <div>
+                            <p>GET IT ON</p>
+                            <p>Google Play</p>
+                        </div>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
