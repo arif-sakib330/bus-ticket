@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="style.css"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Bus Ticket</title>
 </head>
 
@@ -198,7 +198,7 @@
                             </div>
                             <div class="stat">
                                 <img src="images/fare.png" alt="">
-                                <div class="stat-value text-xl text-black">550 Taka
+                                <div id="taka" class=" stat-value text-xl text-black">550 Taka
                                 </div>
                                 <div class="stat-title"> Per Seat</div>
                             </div>
@@ -210,10 +210,10 @@
             <!-- seat -->
             <div class="mt-12 px-44 pb-28 ">
                 <div class=" bg-white p-4 flex rounded-xl border-b-4 border-[#1DD100] min-h-screen">
-                    <div class=" w-2/3">
+                    <div id="seats-container" class=" w-2/3">
                         <h1 class="font-semibold p-2">Select Your Seat</h1>
                         <hr class="border">
-                        <div class="flex place-content-between p-2">
+                        <div class=" flex place-content-between p-2">
                             <div class="flex items-center">
                                 <img src="images/seat-gray.png" alt="">
                                 <h2> Available </h2>
@@ -225,22 +225,28 @@
                             <img src="images/handle.jpg" alt="">
                         </div>
 
-                        <div class="p-2 flex place-content-around items-center">
+                        <div id="seat-div" class="p-2 flex place-content-around items-center">
                             <p>A</p>
-                            <button class="btn px-10">A1</button><button class="btn px-10">A2</button><button
-                                class="btn px-10 ml-6">A3</button><button class="btn px-10">A4</button>
+                            <button class="btn seat-btn px-10">A1</button><button
+                                class="btn seat-btn px-10">A2</button><button
+                                class="btn seat-btn px-10 ml-6">A3</button><button
+                                class="btn seat-btn px-10">A4</button>
                         </div>
 
                         <div class="P-2 flex place-content-around items-center">
                             <p>B</p>
-                            <button class="btn px-10">B1</button><button class="btn px-10">B2</button><button
-                                class="btn px-10 ml-6">B3</button><button class="btn px-10">B4</button>
+                            <button class="btn seat-btn px-10">B1</button><button
+                                class="btn seat-btn px-10">B2</button><button
+                                class="btn px-10 seat-btn  ml-6">B3</button><button
+                                class="btn seat-btn px-10">B4</button>
                         </div>
 
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>C</p>
-                            <button class="btn px-10">C1</button><button class="btn px-10">C2</button><button
-                                class="btn px-10 ml-6">C3</button><button class="btn px-10">C4</button>
+                            <button class="btn seat-btn px-10">C1</button><button
+                                class="btn seat-btn px-10">C2</button><button
+                                class="btn px-10 seat-btn ml-6">C3</button><button
+                                class="btn seat-btn px-10">C4</button>
                         </div>
 
                         <div class="P-2 mt-2 flex place-content-around items-center">
@@ -275,8 +281,9 @@
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>J</p>
-                            <button class="btn px-10">J1</button><button class="btn px-10">J2</button><button
-                                class="btn px-10 ml-6">J3</button><button class="btn px-10">J4</button>
+                            <button id="seat" onclick="getSeat()" class="btn px-10">J1</button><button
+                                class="btn px-10">J2</button><button class="btn px-10 ml-6">J3</button><button
+                                class="btn px-10">J4</button>
                         </div>
                     </div>
 
@@ -284,36 +291,44 @@
                         <div>
                             <h1 class="font-semibold pl-3 py-2">Select Your Seat</h1>
                         </div>
-                        <div>
+                        <div class="rounded-lg bg-[#F7F8F8]">
                             <hr class="border">
-                            <div class="flex rounded-t-md bg-[#F7F8F8] font-medium place-content-between p-2">
+                            <div class="flex font-medium place-content-between p-2">
                                 <div class="flex">
                                     <p>Seat</p>
-                                    <button class="px-1 ml-1 rounded-lg bg-[#1DD100]">2</button>
+                                    <button id="seat-count" class="px-1 ml-1 rounded-lg bg-[#1DD100]">0</button>
                                 </div>
                                 <p>Class</p>
                                 <p>Price</p>
                             </div>
                             <hr class="border">
-                            <div class="flex  text-gray-400 bg-[#F7F8F8] p-2 place-content-between">
-                                <p>A2</p>
-                                <p>Economy</p>
-                                <p>550</p>
+                            <div id="seat-select">
+                                <!-- <div class="flex  text-gray-400  p-2 place-content-between">
+                                    <p>A2</p>
+                                    <p>Economy</p>
+                                    <p>550</p>
+                                </div> -->
                             </div>
                             <hr class="border">
-                            <div class="flex font-semibold bg-[#F7F8F8] p-2 place-content-between">
+                            <div class="flex font-semibold p-2 place-content-between">
                                 <h1>Total Price</h1>
-                                <h1>BDT 1100</h1>
+                                <h1>BDT <span id="total-price">0.00</span> </h1>
                             </div>
-                            <div class="flex p-2 font-semibold bg-[#F7F8F8] place-content-between">
-                                <input class="px-7 rounded-md" type="text" placeholder="Have any coupon?">
-                                <button class="btn text-white font-semibold bg-[#1DD100]">Apply</button>
+                            <div class="flex p-2 font-semibold place-content-between">
+                                <input id="input-coupon" class="px-7 rounded-md" type="text"
+                                    placeholder="Have any coupon?">
+
+                                <button onclick="grandTotal('apply')" id="coupon-btn"
+                                    class="btn text-white font-semibold bg-[#1DD100]">Apply
+                                </button>
                             </div>
                             <hr class=" border">
-                            <div class="flex font-semibold rounded-b-md bg-[#F7F8F8] p-2 place-content-between">
+                            <div class="flex font-semibold rounded-b-md p-2 place-content-between">
                                 <h1>Grand Total</h1>
-                                <h1>BDT 1100</h1>
+                                <h1>BDT <span id="grand-total">0.00</span></h1>
                             </div>
+                        </div>
+                        <div>
                             <div class="p-2">
                                 <h2 class="p-2 font-semibold">Passenger Name*</h2>
                                 <input class="border p-2 pr-36 rounded-md" type="text" placeholder="Enter your name">
@@ -400,6 +415,7 @@
 
     </footer>
 
+    <script src="re-use.js"></script>
     <script src="script.js"></script>
 </body>
 
