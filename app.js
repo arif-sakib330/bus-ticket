@@ -9,6 +9,12 @@ for (const btn of allBtn) {
   btn.addEventListener("click", function (event) {
     const seatName = event.target.innerText;
 
+    const seatCount = getInnerTextValue("seat-count");
+    document.getElementById("seat-count").innerText = seatCount + 1;
+
+    const seatLeft = getInnerTextValue("seat-left");
+    document.getElementById("seat-left").innerText = seatLeft - 1;
+
     const seatSelect = document.getElementById("seat-select");
 
     const div = document.createElement("div");

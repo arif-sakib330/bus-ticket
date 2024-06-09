@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <title>Bus Ticket</title>
 </head>
 
@@ -170,14 +169,16 @@
                                     </div>
                                     <div>
                                         <button class="btn text-[#1DD100] bg-[#1DD1004D]"><img
-                                                src="images/seat-green.png" alt=""> <span>40</span> Seats left
+                                                src="images/seat-green.png" alt="">
+                                            <span id="seat-left">40</span> Seats
+                                            left
                                         </button>
                                     </div>
                                 </div>
                                 <div class="bg-[#F7F8F8] rounded-lg">
                                     <div class="rounded-5xl">
                                         <div class="flex text-black place-content-between p-3">
-                                            <p class="">Rote</p>
+                                            <p class="">Road</p>
                                             <p class="">Dhaka-Sylhet</p>
                                         </div>
                                         <hr class="border">
@@ -251,39 +252,52 @@
 
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>D</p>
-                            <button class="btn px-10">D1</button><button class="btn px-10">D2</button><button
-                                class="btn px-10 ml-6">D3</button><button class="btn px-10">D4</button>
+                            <button class="btn seat-btn px-10">D1</button><button
+                                class="btn seat-btn px-10">D2</button><button
+                                class="btn seat-btn px-10 ml-6">D3</button><button
+                                class="btn seat-btn px-10">D4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>E</p>
-                            <button class="btn px-10">E1</button><button class="btn px-10">E2</button><button
-                                class="btn px-10 ml-6">E3</button><button class="btn px-10">E4</button>
+                            <button class="btn seat-btn px-10">E1</button><button
+                                class="btn seat-btn px-10">E2</button><button
+                                class="btn px-10 seat-btn ml-6">E3</button><button
+                                class="btn seat-btn px-10">E4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>F</p>
-                            <button class="btn px-10">F1</button><button class="btn px-10">F2</button><button
-                                class="btn px-10 ml-6">F3</button><button class="btn px-10">F4</button>
+                            <button class="btn seat-btn px-10">F1</button><button
+                                class="btn seat-btn px-10">F2</button><button
+                                class="btn seat-btn px-10 ml-6">F3</button><button
+                                class="btn seat-btn px-10">F4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>G</p>
-                            <button class="btn px-10">G1</button><button class="btn px-10">G2</button><button
-                                class="btn px-10 ml-6">G3</button><button class="btn px-10">G4</button>
+                            <button class="btn seat-btn px-10">G1</button><button
+                                class="btn seat-btn px-10">G2</button><button
+                                class="btn seat-btn px-10 ml-6">G3</button><button
+                                class="btn seat-btn px-10">G4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>H</p>
-                            <button class="btn px-10">H1</button><button class="btn px-10">H2</button><button
-                                class="btn px-10 ml-6">H3</button><button class="btn px-10">H4</button>
+                            <button class="btn seat-btn px-10">H1</button><button
+                                class="btn seat-btn px-10">H2</button><button
+                                class="btn seat-btn px-10 ml-6">H3</button><button
+                                class="btn seat-btn px-10">H4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>I</p>
-                            <button class="btn px-10">I1</button><button class="btn px-10">I2</button><button
-                                class="btn px-10 ml-6">I3</button><button class="btn px-10">I4</button>
+                            <button class="btn seat-btn px-10">I1</button><button
+                                class="btn seat-btn px-10">I2</button><button
+                                class="btn seat-btn px-10 ml-6">I3</button><button
+                                class="btn seat-btn px-10">I4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>J</p>
-                            <button id="seat" onclick="getSeat()" class="btn px-10">J1</button><button
-                                class="btn px-10">J2</button><button class="btn px-10 ml-6">J3</button><button
-                                class="btn px-10">J4</button>
+                            <button id="seat" onclick="getSeat()" class="btn seat-btn px-10">J1</button><button
+                                class="btn seat-btn px-10">J2</button><button
+                                class="btn seat-btn px-10 ml-6">J3</button><button
+                                class="btn seat-btn px-10">J4</button>
                         </div>
                     </div>
 
@@ -303,11 +317,7 @@
                             </div>
                             <hr class="border">
                             <div id="seat-select">
-                                <!-- <div class="flex  text-gray-400  p-2 place-content-between">
-                                    <p>A2</p>
-                                    <p>Economy</p>
-                                    <p>550</p>
-                                </div> -->
+
                             </div>
                             <hr class="border">
                             <div class="flex font-semibold p-2 place-content-between">
@@ -344,7 +354,8 @@
                                     placeholder="Enter your email id">
                             </div>
                             <div class="p-2">
-                                <button class="btn px-36 p-2 font-semibold text-white bg-[#1DD100]">Next</button>
+                                <a href="success.html"><button
+                                        class="btn px-36 p-2 font-semibold text-white bg-[#1DD100]">Next</button></a>
                             </div>
                             <div class="flex place-content-between">
                                 <u>Terms and Conditions</u>
@@ -355,29 +366,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- SUCCESS -->
-        <div class="w-screen border h-3/4  bg-[#F2F1F1] p-20 flex flex-col items-center">
-            <div class="card w-1/2  bg-base-100 shadow-xl p-5 items-center">
-                <div class="card-body displa items-center ">
-                    <div>
-                        <img src="images/success.png" alt="">
-                        <h2 class="card-title text-center text-[#27AE60] ">SUCCESS</h2>
-                    </div>
-                    <div>
-                        <p class="text-center">Thank you for Booking Our Bus Seats. <br>
-                            We are working hard to find the best service and deals for you. <br>
-                            Shortly you will find a confirmation in your email.
-                        </p>
-                    </div>
-                    <div class="card-actions justify-end">
-                        <button class="btn text-white bg-[#27AE60]">Continue</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
-
     <footer class=" p-10 bg-black text-white">
         <div class="flex place-content-between px-20 pb-5">
             <div>
@@ -415,8 +404,7 @@
 
     </footer>
 
-    <script src="re-use.js"></script>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
