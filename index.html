@@ -72,7 +72,7 @@
                         and
                         a comfortable <br> journey with amenities like air conditioning, TV, and Wi-Fi
                     </p>
-                    <button onclick="getSeatContainer()" class="btn buy-ticket-btn font-extrabold p-5 bg-[#1DD100]">Buy
+                    <button id="buy-ticket-btn" class="btn  font-extrabold p-5 bg-[#1DD100]">Buy
                         Tickets</button>
                 </div>
             </div>
@@ -144,7 +144,7 @@
             </div>
         </div>
         <!-- seats -->
-        <div class="bg-[#F7F8F8] min-h-screen seat-container">
+        <div id="scroll" class="bg-[#F7F8F8] min-h-screen seat-container">
             <!-- paribahan -->
             <div class=" flex flex-col justify-center items-center mt-12 w-full">
                 <div class=" flex flex-col justify-center items-center">
@@ -215,11 +215,14 @@
                         <h1 class="font-semibold p-2">Select Your Seat</h1>
                         <hr class="border">
                         <div class=" flex place-content-between p-2">
-                            <div class="flex items-center">
+                            <div class="flex font-semibold items-center">
                                 <img src="images/seat-gray.png" alt="">
                                 <h2> Available </h2>
                             </div>
-                            <button class="btn  text-[#1DD100] bg-[#1DD1004D]"> Selected</button>
+                            <div class="flex font-semibold items-center text-[#1DD100]">
+                                <img src="images/seat-green.png" alt="">
+                                <h2> Selected </h2>
+                            </div>
                         </div>
                         <hr class="border">
                         <div class="p-2 flex justify-end">
@@ -339,24 +342,29 @@
                             </div>
                         </div>
                         <div>
-                            <div class="p-2">
-                                <h2 class="p-2 font-semibold">Passenger Name*</h2>
-                                <input class="border p-2 pr-36 rounded-md" type="text" placeholder="Enter your name">
-                            </div>
-                            <div class="p-2">
-                                <h2 class="p-2 font-semibold">Phone Number*</h2>
-                                <input class="border p-2 pr-36 rounded-md" type="number" value="01"
-                                    placeholder="Enter your phone number">
-                            </div>
-                            <div class="p-2">
-                                <h2 class="p-2 font-semibold">Email ID</h2>
-                                <input class="border p-2 pr-36 rounded-md" type="email" value="@gmail.com"
-                                    placeholder="Enter your email id">
-                            </div>
-                            <div class="p-2">
-                                <a href="success.html"><button
-                                        class="btn px-36 p-2 font-semibold text-white bg-[#1DD100]">Next</button></a>
-                            </div>
+                            <form action="">
+                                <div class="p-2">
+                                    <h2 class="p-2 font-semibold">Passenger Name*</h2>
+                                    <input name="name" required class="border p-2 pr-36 rounded-md" type="text"
+                                        placeholder="Enter your name">
+                                </div>
+                                <div class="p-2">
+                                    <h2 class="p-2 font-semibold">Phone Number*</h2>
+                                    <input class="border p-2 pr-36 rounded-md" type="number"
+                                        placeholder="Enter your phone number" required>
+                                </div>
+                                <div class="p-2">
+                                    <h2 class="p-2 font-semibold">Email ID</h2>
+                                    <input class="border p-2 pr-36 rounded-md" type="email"
+                                        placeholder="Enter your email id">
+                                </div>
+                                <div class="p-2">
+                                    <a href="success.html">
+                                        <button class="btn px-36 p-2 font-semibold text-white bg-[#1DD100]">Next
+                                        </button>
+                                    </a>
+                                </div>
+                            </form>
                             <div class="flex place-content-between">
                                 <u>Terms and Conditions</u>
                                 <u>Cancellation Policy</u>
@@ -405,6 +413,7 @@
     </footer>
 
     <script src="app.js"></script>
+
 </body>
 
 </html>

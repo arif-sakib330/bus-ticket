@@ -1,3 +1,10 @@
+const btn = document.getElementById("buy-ticket-btn");
+const targetElement = document.getElementById("scroll");
+
+btn.addEventListener("click", function () {
+  targetElement.scrollIntoView({ behavior: "smooth" });
+});
+
 function getInnerTextValue(id) {
   const text = document.getElementById(id).innerText;
   const value = parseInt(text);
@@ -14,6 +21,8 @@ for (const btn of allBtn) {
 
     const seatLeft = getInnerTextValue("seat-left");
     document.getElementById("seat-left").innerText = seatLeft - 1;
+
+    btn.style.backgroundColor = "#1DD100";
 
     const seatSelect = document.getElementById("seat-select");
 
