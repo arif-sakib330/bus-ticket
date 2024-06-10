@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="w-auto mx-5 lg:mx-12 border-4 border-red-600 mb-4">
+    <header id="header" class="w-auto mx-5 lg:mx-12 mb-4">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -60,17 +60,17 @@
             </div>
         </div>
     </header>
-    <main class="justify-center">
+    <main id="main" class="justify-center">
         <!-- banner -->
-        <div class="hero w-auto mx-5 lg:mx-12 min-h-screen border-4 border-red-600"
-            style="background-image: url(images/banner.png); ">
+        <div class="hero w-auto mx-5 lg:mx-12 lg:min-h-screen" style="background-image: url(images/banner.png); ">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-screen-md  gap-3">
-                    <h1 class=" mb-5 text-5xl font-bold">End-to-End Travel with <br>
-                        <span class="text-[#1DD100]">SAKIB Paribahan</span>
+                    <h1 class=" mb-5 text-3xl lg:text-5xl font-bold">End-to-End Travel with <br>
+                        <span class="font-raleway text-[#1DD100]">SAKIB Paribahan</span>
                     </h1>
-                    <p class="mb-5">Sakib Paribahan offers the best bus service in Bangladesh, ensuring timely arrivals
+                    <p class="mb-5 font-inter">Sakib Paribahan offers the best bus service in Bangladesh, ensuring
+                        timely arrivals
                         and
                         a comfortable <br> journey with amenities like air conditioning, TV, and Wi-Fi
                     </p>
@@ -80,28 +80,28 @@
             </div>
         </div>
         <!-- stat -->
-        <div class="w-auto mx-5 lg:mx-12 border-4 border-red-500 flex justify-center">
-            <div class="flex justify-center -mt-12 gap-4 border-4 border-yellow-600">
-                <div class=" flex flex-row p-3 bg-white border-b-8 border-[#1DD100] rounded-xl">
-                    <img src="images/people.png" alt="">
+        <div class="w-auto mx-5 lg:mx-12 flex justify-center">
+            <div class="flex justify-center lg:-mt-12 gap-4">
+                <div class="flex flex-row p-3 bg-white border-b-8 border-[#1DD100] rounded-xl">
+                    <img class="lg:w-auto w-1/3 h-3/4" src="images/people.png" alt="">
                     <div>
-                        <p class="text- xl lg:text-4xl font-extrabold">500K+</p>
+                        <p class="text-xl lg:text-4xl font-extrabold">500K+</p>
                         <p>Registered Users</p>
                     </div>
                 </div>
 
                 <div class="flex p-3  bg-white border-b-8 border-[#1DD100] rounded-xl">
-                    <img src="images/ticket-cupon.png" alt="">
+                    <img class="lg:w-auto w-1/3 h-3/4" src="images/ticket-cupon.png" alt="">
                     <div>
-                        <p class="text-4xl font-extrabold">1.7 Lacks</p>
+                        <p class="text-xl lg:text-4xl font-extrabold">1.7 Lacks</p>
                         <p>Tickets Sold</p>
                     </div>
                 </div>
 
                 <div class="flex px-5  bg-white border-b-8 border-[#1DD100] r rounded-xl">
-                    <img src="images/stoppage.png" alt="">
+                    <img class="lg:w-auto w-1/3 h-3/4" src="images/stoppage.png" alt="">
                     <div>
-                        <p class="text-4xl font-extrabold">80k+</p>
+                        <p class="text-xl lg:text-4xl font-extrabold">80k+</p>
                         <p>Rental Partners</p>
                     </div>
                 </div>
@@ -110,15 +110,16 @@
         </div>
 
         <!-- Best offers for you -->
-        <div id="offer" class="w-auto mx-5 lg:mx-12 border-4 border-red-600 mt-20 space-y-8 flex flex-col items-center">
+        <div id="offer" class="w-auto mx-5 lg:mx-12 mt-20 lg:space-y-8 flex flex-col items-center">
             <div>
-                <h1 class="font-bold text-4xl">Best offers for you</h1>
+                <h1 class="font-bold text-4xl font-raleway">Best offers for you</h1>
             </div>
 
-            <div class="lg:flex justify-center space-x-8">
-                <div class="stats bg-[#FFBF0F] text-primary-content">
-                    <div class="stat">
-                        <div class="stat-value text-black">15% OFF</div>
+            <div class="lg:flex mx-auto mt-3 flex-row justify-center lg:space-x-8">
+                <div class="stats bg-[#FFBF0F] text-primary-content w-auto items-center mb-2">
+
+                    <div class="stat font-inter">
+                        <div class="lg:stat-value text-3xl font-semibold text-black">15% OFF</div>
                         <h1 class=" text-black">on your next purchase</h1>
                         <div class="stat-title"> use by January 2024 </div>
                     </div>
@@ -128,9 +129,9 @@
                     </div>
                 </div>
 
-                <div class="stats bg-[#F78C9C] text-primary-content">
-                    <div class="stat">
-                        <div class="stat-value text-black">20% OFF</div>
+                <div class="stats items-center bg-[#F78C9C] text-primary-content">
+                    <div class="stat font-inter">
+                        <div class="lg:stat-value text-3xl font-semibold text-black">20% OFF</div>
                         <h1 class=" text-black">on your next purchase</h1>
                         <div class="stat-title"> use by January 2024 </div>
                     </div>
@@ -141,67 +142,71 @@
                 </div>
             </div>
             <div>
-                <button class="btn border-[#1DD100] text-[#1DD100] justify-center">See All Offers</button>
+                <button class="btn mt-2 border-[#1DD100] text-[#1DD100] justify-center">See All Offers</button>
             </div>
         </div>
         <!-- seats -->
-        <div id="scroll" class="w-auto bg-[#F7F8F8] seat-container border-4 border-red-600 mt-5">
+        <div id="scroll" class="w-auto bg-[#F7F8F8] seat-container mt-5">
             <!-- paribahan -->
             <div class=" flex flex-col justify-center items-center mt-5 lg:mt-12 w-full">
                 <div class=" flex flex-col justify-center items-center">
-                    <div class=" text-center h-36">
-                        <h1 class="text-3xl font-bold">SAKIB Paribahan</h1>
-                        <p>Sakib Paribahan offers the best bus service in Bangladesh, ensuring timely arrivals and a
+                    <div class=" text-center w-3/4 lg:w-1/2">
+                        <h1 class="lg:text-3xl Raleway text-2xl mt-3 font-bold font-raleway">SAKIB Paribahan</h1>
+                        <p class="font-inter">Sakib Paribahan offers the best bus service in Bangladesh, ensuring timely
+                            arrivals and a
                             comfortable
-                            <br>
                             journey with amenities like air conditioning, TV, and Wi-Fi
                         </p>
                     </div>
 
-                    <div class="">
-                        <div class="stats text-primary-content items-center">
-                            <div class="stat">
-                                <div class="flex place-content-between p-5">
+                    <div class="lg:flex flex-row items-center justify-center  text-primary-content">
+
+                        <div class="stat">
+                            <div class="flex place-content-between p-5">
+                                <div>
+                                    <img src="images/bus-logo.png" alt="">
                                     <div>
-                                        <img src="images/bus-logo.png" alt="">
-                                        <div>
-                                            <div class="stat-value text-black">SAKIB Paribahan</div>
-                                            <div class="stat-title">Coach-009-WEB ! AC_Business </div>
+                                        <div class="lg:stat-value text-black text-2xl font-bold font-raleway">SAKIB
+                                            Paribahan
                                         </div>
-                                    </div>
-                                    <div>
-                                        <button class="btn text-[#1DD100] bg-[#1DD1004D]"><img
-                                                src="images/seat-green.png" alt="">
-                                            <span id="seat-left">40</span> Seats
-                                            left
-                                        </button>
+                                        <div class="stat-title">Coach-009-WEB ! AC_Business </div>
                                     </div>
                                 </div>
-                                <div class="bg-[#F7F8F8] rounded-lg">
-                                    <div class="rounded-5xl">
-                                        <div class="flex text-black place-content-between p-3">
-                                            <p class="">Road</p>
-                                            <p class="">Dhaka-Sylhet</p>
-                                        </div>
-                                        <hr class="border">
-                                        <div class="flex text-black place-content-between p-3">
-                                            <p class="">9:00 pm</p>
-                                            <p class="">Departure Time</p>
-                                        </div>
-                                        <hr class="border">
-                                        <div class="flex text-black place-content-between p-3">
-                                            <p class=" bg-[#0307120D] p-2 mx-2 rounded-md">Boarding Point - Laxmipur
-                                            </p>
-                                            <p class=" bg-[#0307120D] mx-2 p-2 rounded-md">Dropping Point - Bogura
-                                            </p>
-                                            <p class=" bg-[#0307120D] p-2 rounded-md">Est. Time - 11 Hour</p>
-                                        </div>
+                                <div>
+                                    <button class="btn text-[#1DD100] bg-[#1DD1004D]"><img src="images/seat-green.png"
+                                            alt="">
+                                        <span id="seat-left">40</span> Seats
+                                        left
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-[#F7F8F8] rounded-lg font-inter">
+                                <div class="rounded-5xl">
+                                    <div class="flex text-black place-content-between p-3">
+                                        <p class="">Road</p>
+                                        <p class="">Dhaka-Sylhet</p>
+                                    </div>
+                                    <hr class="border">
+                                    <div class="flex text-black place-content-between p-3">
+                                        <p class="">9:00 pm</p>
+                                        <p class="">Departure Time</p>
+                                    </div>
+                                    <hr class="border">
+                                    <div class="flex text-black place-content-between p-3">
+                                        <p class=" bg-[#0307120D] p-2 mx-2 rounded-md">Boarding Point - Laxmipur
+                                        </p>
+                                        <p class=" bg-[#0307120D] mx-2 p-2 rounded-md">Dropping Point - Bogura
+                                        </p>
+                                        <p class=" bg-[#0307120D] p-2 rounded-md">Est. Time - 11 Hour</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="stat">
+                        </div>
+
+                        <div class="stat w-auto flex justify-center ">
+                            <div class="border-b-8 p-2 border-[#1DD100] rounded-2xl">
                                 <img src="images/fare.png" alt="">
-                                <div id="taka" class=" stat-value text-xl text-black">550 Taka
+                                <div id="taka" class=" stat-value text-xl text-black font-raleway">550 Taka
                                 </div>
                                 <div class="stat-title"> Per Seat</div>
                             </div>
@@ -211,10 +216,10 @@
             </div>
 
             <!-- seat -->
-            <div class="mt-3 lg:mt-12 lg:px-44 pb-5 lg:pb-28 ">
+            <div class="mt-3 lg:mt-12 lg:px-44 pb-5 lg:pb-28 font-inter">
                 <div class=" bg-white p-1 lg:p-4 lg:flex rounded-xl border-b-4 border-[#1DD100] min-h-screen">
                     <div id="seats-container" class=" lg:w-2/3">
-                        <h1 class="font-semibold p-2">Select Your Seat</h1>
+                        <h1 class="font-semibold p-2 font-raleway">Select Your Seat</h1>
                         <hr class="border">
                         <div class=" flex place-content-between p-2">
                             <div class="flex font-semibold items-center">
@@ -233,75 +238,76 @@
 
                         <div id="seat-div" class="p-2 flex place-content-around items-center">
                             <p>A</p>
-                            <button class="btn seat-btn px-10">A1</button><button
-                                class="btn seat-btn px-10">A2</button><button
-                                class="btn seat-btn px-10 ml-6">A3</button><button
-                                class="btn seat-btn px-10">A4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">A1</button><button
+                                class="btn seat-btn px-7  lg:px-10">A2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">A3</button><button
+                                class="btn seat-btn px-7 lg:px-10">A4</button>
                         </div>
 
                         <div class="P-2 flex place-content-around items-center">
                             <p>B</p>
-                            <button class="btn seat-btn px-10">B1</button><button
-                                class="btn seat-btn px-10">B2</button><button
-                                class="btn px-10 seat-btn  ml-6">B3</button><button
-                                class="btn seat-btn px-10">B4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">B1</button><button
+                                class="btn seat-btn px-7 lg:px-10">B2</button><button
+                                class="btn px-7 lg:px-10 seat-btn  ml-6">B3</button><button
+                                class="btn seat-btn px-7 lg:px-10">B4</button>
                         </div>
 
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>C</p>
-                            <button class="btn seat-btn px-10">C1</button><button
-                                class="btn seat-btn px-10">C2</button><button
-                                class="btn px-10 seat-btn ml-6">C3</button><button
-                                class="btn seat-btn px-10">C4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">C1</button><button
+                                class="btn seat-btn px-7 lg:px-10">C2</button><button
+                                class="btn px-7 lg:px-10 seat-btn ml-6">C3</button><button
+                                class="btn seat-btn px-7 lg:px-10">C4</button>
                         </div>
 
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>D</p>
-                            <button class="btn seat-btn px-10">D1</button><button
-                                class="btn seat-btn px-10">D2</button><button
-                                class="btn seat-btn px-10 ml-6">D3</button><button
-                                class="btn seat-btn px-10">D4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">D1</button><button
+                                class="btn seat-btn px-7 lg:px-10">D2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">D3</button><button
+                                class="btn seat-btn px-7 lg:px-10">D4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>E</p>
-                            <button class="btn seat-btn px-10">E1</button><button
-                                class="btn seat-btn px-10">E2</button><button
-                                class="btn px-10 seat-btn ml-6">E3</button><button
-                                class="btn seat-btn px-10">E4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">E1</button><button
+                                class="btn seat-btn px-7 lg:px-10">E2</button><button
+                                class="btn px-7 lg:px-10 seat-btn ml-6">E3</button><button
+                                class="btn seat-btn px-7 lg:px-10">E4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>F</p>
-                            <button class="btn seat-btn px-10">F1</button><button
-                                class="btn seat-btn px-10">F2</button><button
-                                class="btn seat-btn px-10 ml-6">F3</button><button
-                                class="btn seat-btn px-10">F4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">F1</button><button
+                                class="btn seat-btn px-7 lg:px-10">F2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">F3</button><button
+                                class="btn seat-btn px-7 lg:px-10">F4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>G</p>
-                            <button class="btn seat-btn px-10">G1</button><button
-                                class="btn seat-btn px-10">G2</button><button
-                                class="btn seat-btn px-10 ml-6">G3</button><button
-                                class="btn seat-btn px-10">G4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">G1</button><button
+                                class="btn seat-btn px-7 lg:px-10">G2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">G3</button><button
+                                class="btn seat-btn px-7 lg:px-10">G4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>H</p>
-                            <button class="btn seat-btn px-10">H1</button><button
-                                class="btn seat-btn px-10">H2</button><button
-                                class="btn seat-btn px-10 ml-6">H3</button><button
-                                class="btn seat-btn px-10">H4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">H1</button><button
+                                class="btn seat-btn px-7 lg:px-10">H2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">H3</button><button
+                                class="btn seat-btn px-7 lg:px-10">H4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>I</p>
-                            <button class="btn seat-btn px-10">I1</button><button
-                                class="btn seat-btn px-10">I2</button><button
-                                class="btn seat-btn px-10 ml-6">I3</button><button
-                                class="btn seat-btn px-10">I4</button>
+                            <button class="btn seat-btn px-7 lg:px-10">I1</button><button
+                                class="btn seat-btn px-7 lg:px-10">I2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">I3</button><button
+                                class="btn seat-btn px-7 lg:px-10">I4</button>
                         </div>
                         <div class="P-2 mt-2 flex place-content-around items-center">
                             <p>J</p>
-                            <button id="seat" onclick="getSeat()" class="btn seat-btn px-10">J1</button><button
-                                class="btn seat-btn px-10">J2</button><button
-                                class="btn seat-btn px-10 ml-6">J3</button><button class="btn seat-btn px-10">J4
+                            <button id="seat" onclick="getSeat()" class="btn seat-btn px-7 lg:px-10">J1</button><button
+                                class="btn seat-btn px-7 lg:px-10">J2</button><button
+                                class="btn seat-btn px-7 lg:px-10 ml-6">J3</button><button
+                                class="btn seat-btn px-7 lg:px-10">J4
                             </button>
                         </div>
                     </div>
@@ -354,7 +360,7 @@
                                 <div class="p-2">
                                     <h2 class="p-2 font-semibold">Phone Number*</h2>
                                     <input class="border p-2 pr-36 rounded-md" type="number"
-                                        placeholder="Enter your phone number" required>
+                                        placeholder="Enter your phone number">
                                 </div>
                                 <div class="p-2">
                                     <h2 class="p-2 font-semibold">Email ID</h2>
@@ -363,8 +369,9 @@
                                 </div>
                                 <div class="p-2">
 
-                                    <button class="btn px-36 p-2 font-semibold text-white bg-[#1DD100]"><a
-                                            target="_blank" href="success.html">Next</a>
+                                    <button id="next-btn"
+                                        class="btn  px-36 p-2 font-semibold text-white bg-[#1DD100]"><a target="_blank"
+                                            href="success.html">Next</a>
                                     </button>
 
                                 </div>
@@ -379,7 +386,27 @@
             </div>
         </div>
     </main>
-    <footer class=" p-3 lg:p-10 bg-black text-white">
+    <!-- SUCCESS -->
+    <div id="success" class="w-auto border bg-[#F2F1F1] p-5 lg:p-20 flex flex-col items-center hidden">
+        <div class="card bg-base-100 shadow-xl p-5 items-center">
+            <div class="card-body displa items-center ">
+                <div>
+                    <img src="images/success.png" alt="">
+                    <h2 class="card-title text-center text-[#27AE60] ">SUCCESS</h2>
+                </div>
+                <div>
+                    <p class="text-center">Thank you for Booking Our Bus Seats. <br>
+                        We are working hard to find the best service and deals for you. <br>
+                        Shortly you will find a confirmation in your email.
+                    </p>
+                </div>
+                <div class="card-actions justify-end">
+                    <button class="btn text-white bg-[#27AE60]">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class=" p-3 lg:p-10 bg-black text-white">
         <div class="flex place-content-between px-3 lg:px-20 pb-5">
             <div>
                 <div>

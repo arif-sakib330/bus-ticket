@@ -79,6 +79,17 @@ function totalPrice(value) {
   const totalPrice = getInnerTextValue("total-price");
   const sum = totalPrice + parseInt(value);
   document.getElementById("total-price").innerText = sum;
-
-  // grandTotal(sum);
 }
+
+const nextBtn = document.getElementById("next-btn");
+const header = document.getElementById("header");
+const main = document.getElementById("main");
+const footer = document.getElementById("footer");
+const successDiv = document.getElementById("success");
+console.log(nextBtn, header, main);
+nextBtn.addEventListener("click", function () {
+  successDiv.classList.remove("hidden");
+  header.classList.add("hidden");
+  main.classList.add("hidden");
+  footer.classList.add("hidden");
+});
